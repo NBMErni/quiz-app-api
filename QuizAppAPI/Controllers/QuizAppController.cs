@@ -45,34 +45,22 @@ namespace QuizAppAPI.Controllers
 
             try
             {
-
                 var quiz = new Quiz
                 {
-                   
-
                     Question = quizDto.Question,
-                    Answer = quizDto.Answer
+                    Answer = quizDto.Answer,
+                    ListOfPossibleAnswers = quizDto.ListOfPossibleAnswers
                 };
-
 
                 dbContext.Quiz.Add(quiz);
                 dbContext.SaveChanges();
 
-             /*   var response = new
-                {
-                    Message = $"Questionnaire {employee.EmployeeName} has been successfully created."
-                };*/
-
                 return CreatedAtAction(nameof(GetQuestionById), new { id = quiz.QuizId }, quiz);
-                }
-     
+            }
             catch (Exception ex)
             {
-
                 return StatusCode(StatusCodes.Status500InternalServerError, $"Internal server error: {ex.Message}");
             }
-
-
         }
 
         // PUT: api/EmployeeInformation/{id}

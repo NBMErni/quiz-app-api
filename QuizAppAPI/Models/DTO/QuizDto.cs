@@ -9,5 +9,9 @@ namespace QuizAppAPI.Models.DTO
 
         [Required]
         public string Answer { get; set; }
+
+       
+        public List<string> ListOfPossibleAnswers { get; set; } = new List<string>();
+
     }
 }

@@ -134,3 +134,4 @@ C:\Users\Boot Camp\source\repos\QuizApp\QuizAppAPI\obj\Debug\net8.0\refint\QuizA
 C:\Users\Boot Camp\source\repos\QuizApp\QuizAppAPI\obj\Debug\net8.0\QuizAppAPI.pdb
 C:\Users\Boot Camp\source\repos\QuizApp\QuizAppAPI\obj\Debug\net8.0\QuizAppAPI.genruntimeconfig.cache
 C:\Users\Boot Camp\source\repos\QuizApp\QuizAppAPI\obj\Debug\net8.0\ref\QuizAppAPI.dll
+C:\Users\Boot Camp\source\repos\QuizApp\QuizAppAPI\obj\Debug\net8.0\QuizAppAPI.sourcelink.json

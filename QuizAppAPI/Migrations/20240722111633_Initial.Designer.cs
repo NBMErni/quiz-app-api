@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace QuizAppAPI.Migrations
 {
     [DbContext(typeof(QuizAppDbContext))]
-    [Migration("20240722075546_Initial")]
+    [Migration("20240722111633_Initial")]
     partial class Initial
     {
         /// <inheritdoc />
@@ -33,6 +33,10 @@ namespace QuizAppAPI.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("QuizId"));
 
                     b.Property<string>("Answer")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ListOfPossibleAnswers")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 

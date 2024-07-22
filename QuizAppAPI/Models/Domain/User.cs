@@ -1,7 +1,10 @@
-﻿namespace QuizAppAPI.Models.Domain
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace QuizAppAPI.Models.Domain
 {
     public class User
     {
+        [Key]
         public int UserId { get; set; }
         public string UserName { get; set; }
 
