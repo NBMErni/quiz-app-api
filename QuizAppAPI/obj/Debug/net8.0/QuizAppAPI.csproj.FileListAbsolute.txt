@@ -135,3 +135,9 @@ C:\Users\Boot Camp\source\repos\QuizApp\QuizAppAPI\obj\Debug\net8.0\QuizAppAPI.p
 C:\Users\Boot Camp\source\repos\QuizApp\QuizAppAPI\obj\Debug\net8.0\QuizAppAPI.genruntimeconfig.cache
 C:\Users\Boot Camp\source\repos\QuizApp\QuizAppAPI\obj\Debug\net8.0\ref\QuizAppAPI.dll
 C:\Users\Boot Camp\source\repos\QuizApp\QuizAppAPI\obj\Debug\net8.0\QuizAppAPI.sourcelink.json
+C:\Users\Boot Camp\source\repos\QuizApp\QuizAppAPI\bin\Debug\net8.0\System.Web.Cors.dll
+C:\Users\Boot Camp\source\repos\QuizApp\QuizAppAPI\bin\Debug\net8.0\System.Net.Http.Formatting.dll
+C:\Users\Boot Camp\source\repos\QuizApp\QuizAppAPI\bin\Debug\net8.0\System.Web.Http.dll
+C:\Users\Boot Camp\source\repos\QuizApp\QuizAppAPI\bin\Debug\net8.0\System.Web.Http.Cors.dll
+C:\Users\Boot Camp\source\repos\QuizApp\QuizAppAPI\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\Boot Camp\source\repos\QuizApp\QuizAppAPI\bin\Debug\net8.0\Newtonsoft.Json.Bson.dll
