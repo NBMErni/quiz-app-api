@@ -30,7 +30,7 @@ namespace QuizAppAPI.Controllers
         public IActionResult GetUserByUsername(string username)
         {
             Debug.WriteLine($"Username: {username}");
-            var user = dbContext.User.FirstOrDefault(x => x.UserName == username);
+            var user = dbContext.User.FirstOrDefault(x => x.Username == username);
 
             if (user == null)
             {
@@ -43,7 +43,7 @@ namespace QuizAppAPI.Controllers
         [HttpPost("login")]
         public IActionResult Login([FromBody] UserDto userDto)
         {
-            var user = dbContext.User.FirstOrDefault(x => x.UserName == userDto.UserName && x.Password == userDto.Password);
+            var user = dbContext.User.FirstOrDefault(x => x.Username == userDto.Username && x.Password == userDto.Password);
 
             if (user == null)
             {
@@ -63,7 +63,7 @@ namespace QuizAppAPI.Controllers
 
             var user = new User
             {
-                UserName = registerDto.UserName,
+                Username = registerDto.Username,
                 Password = registerDto.Password,
                 Role = "user" 
             };
@@ -73,10 +73,10 @@ namespace QuizAppAPI.Controllers
 
             var response = new
             {
-                Message = $"User {user.UserName} has been successfully created."
+                Message = $"User {user.Username} has been successfully created."
             };
 
-            return CreatedAtAction(nameof(GetUserByUsername), new { username = user.UserName }, response);
+            return CreatedAtAction(nameof(GetUserByUsername), new { username = user.Username }, response);
         }
     }
 }

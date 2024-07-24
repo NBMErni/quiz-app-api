@@ -4725,19 +4725,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Boot Camp\\.nuget\\packages\\": {}
+    "C:\\Users\\Nikko\\.nuget\\packages\\": {},
+    "E:\\MIcrosoft Visual Studio Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Boot Camp\\source\\repos\\QuizApp\\QuizAppAPI\\QuizAppAPI.csproj",
+      "projectUniqueName": "D:\\vs_studio\\quiz-app-api\\QuizAppAPI\\QuizAppAPI.csproj",
       "projectName": "QuizAppAPI",
-      "projectPath": "C:\\Users\\Boot Camp\\source\\repos\\QuizApp\\QuizAppAPI\\QuizAppAPI.csproj",
-      "packagesPath": "C:\\Users\\Boot Camp\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Boot Camp\\source\\repos\\QuizApp\\QuizAppAPI\\obj\\",
+      "projectPath": "D:\\vs_studio\\quiz-app-api\\QuizAppAPI\\QuizAppAPI.csproj",
+      "packagesPath": "C:\\Users\\Nikko\\.nuget\\packages\\",
+      "outputPath": "D:\\vs_studio\\quiz-app-api\\QuizAppAPI\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "E:\\MIcrosoft Visual Studio Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Boot Camp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Nikko\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

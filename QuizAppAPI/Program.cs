@@ -1,8 +1,7 @@
 
 using EMPManagementAPI.Models;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
-using QuizAppAPI.Models;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,11 +12,13 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+
+//CORS
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("QuizApp", policyBuilder =>
     {
-        policyBuilder.WithOrigins("http://localhost:5173/")
+        policyBuilder.WithOrigins("http://localhost:5173")
                      .AllowAnyHeader()
                      .AllowAnyMethod()
                      .AllowCredentials();
