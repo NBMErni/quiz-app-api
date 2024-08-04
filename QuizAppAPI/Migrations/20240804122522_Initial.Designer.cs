@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace QuizAppAPI.Migrations
 {
     [DbContext(typeof(QuizAppDbContext))]
-    [Migration("20240722111633_Initial")]
+    [Migration("20240804122522_Initial")]
     partial class Initial
     {
         /// <inheritdoc />
@@ -19,6 +19,7 @@ namespace QuizAppAPI.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
+                .UseCollation("SQL_Latin1_General_CP1_CS_AS")
                 .HasAnnotation("ProductVersion", "8.0.7")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
@@ -65,7 +66,7 @@ namespace QuizAppAPI.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("UserName")
+                    b.Property<string>("Username")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 

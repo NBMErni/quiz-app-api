@@ -1,6 +1,7 @@
 ﻿using EMPManagementAPI.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using QuizAppAPI.Models.Domain;
 using QuizAppAPI.Models.DTO;
 using System.Diagnostics;
@@ -43,15 +44,27 @@ namespace QuizAppAPI.Controllers
         [HttpPost("login")]
         public IActionResult Login([FromBody] UserDto userDto)
         {
-            var user = dbContext.User.FirstOrDefault(x => x.Username == userDto.Username && x.Password == userDto.Password);
+            /*dbContext.User.FirstOrDefault(x => x.Username == userDto.Username && x.Password == userDto.Password);*/
+            var user = dbContext.User
+                      .Where(x => EF.Functions.Collate(x.Username, "Latin1_General_BIN") == userDto.Username &&
+                                  EF.Functions.Collate(x.Password, "Latin1_General_BIN") == userDto.Password)
+                      .FirstOrDefault();
+
 
             if (user == null)
             {
-                return Unauthorized("Invalid username or password.");
+                return Unauthorized(new { Message = "Invalid username or password." });
             }
 
-            return Ok(new { Message = "Login successful", User = user.Role });
+            return Ok(new
+            {
+                Message = "Login successful",
+                Role = user.Role,
+                User = user.Username
+             
+            });
         }
+
 
         [HttpPost("register")]
         public IActionResult Register([FromBody] RegisterDto registerDto)
